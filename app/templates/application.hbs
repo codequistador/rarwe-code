@@ -1,3 +1,17 @@
-<h2 id="title">Welcome to Ember</h2>
+<!-- app/templates/application.hbs -->
+<div class="container">
+  <div class="row list-wrapper push-down-m">
+    <div class="col-md-12">
+      <ul class="list-group songs">
+        {{#each songs.sortedContent as |song|}}
+          <li class="list-group-item">
+            {{song.title}} by <em>{{song.band}}</em>
+            <span class="rating pull-right">{{song.rating}}</span>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
 
 {{outlet}}
